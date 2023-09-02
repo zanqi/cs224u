@@ -114,12 +114,12 @@ class GloVe:
             if epoch_error <= self.tol:
                 utils.progress_bar(
                     "Converged on iteration {} with error {}".format(
-                        iteration, epoch_error, self.display_progress))
+                        iteration, epoch_error), self.display_progress)
                 break
 
             utils.progress_bar(
                 "Finished epoch {} of {}; error is {}".format(
-                    iteration, self.max_iter, epoch_error, self.display_progress))
+                    iteration, self.max_iter, epoch_error), self.display_progress)
 
         # Return the sum of the word and context matrices, per the advice
         # in section 4.2:

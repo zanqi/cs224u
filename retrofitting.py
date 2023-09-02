@@ -134,7 +134,7 @@ def plot_retro_vsm(Q, edges, ax=None, lims=None):
     if lims is not None:
         ax.set_xlim(lims)
         ax.set_ylim(lims)
-    _ = Q.apply(lambda x: ax.text(x[0], x[1], x.name, fontsize=18), axis=1)
+    _ = Q.apply(lambda x: ax.text(x.iloc[0], x.iloc[1], x.name, fontsize=18), axis=1)
     for i, vals in edges.items():
         for j in vals:
             x0, y0 = Q.iloc[i].values
