@@ -70,3 +70,5 @@ rel_ext_data*
 ColBERT*
 experiments*
 cache*
+.env
+wandb/*
